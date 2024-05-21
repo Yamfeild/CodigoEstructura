@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% block content %}
+
+<!-- Tabla de registros -->
+<div class="w3-container w3-padding-48">
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REGISTROS</span></h5>
+  <table class="w3-table-all w3-card-4">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>N° Ventanilla</th>
+        <th>Nombre</th>
+        <th>Fecha y hora</th>
+        <th>Calificación</th>
+        
+
+      </tr>
+    </thead>
+    <tbody id="recordsTable">
+      {% for item in lista %}
+        <tr>
+          <td>{{ item.numVentanilla}}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.fecha }}</td>
+          <td>{{ item.calificacion }}</td>
+        </tr>  
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</div>
+</div>
+{% endblock %}
